@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Flat UI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Loading Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="css/flat-ui.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    <link rel='stylesheet' href='/css/style.css' />
+
+    <style type="text/css">
+        
+        #meme_status_menu {
+            height: 50px;    
+        }
+        .meme_status_service_name {
+            width: 80%;
+        }
+        .meme_status_service_name_th {
+            font-size: 15px;
+        }
+        .meme_status_icon {
+            margin-left: 0px;
+        }
+        .meme_status_jenkins_iframe {
+            width: 100%;
+            height: 450px;
+            border: 1px solid #eee;
+        }
+        .demoapps td{
+            vertical-align: top;
+        }
+        .share {
+            width: 200px;
+        }
+        .share-label {
+            width: 100%;
+        }
+        footer {
+            text-align: center;
+        }
+
+        #meme_status_summary {
+            border: 1px solid #eee;
+            padding: 10px 30px 0px 30px;
+        }
+
+        @media (max-width: 767px) {
+            .span2 {
+                width: 104px !important;
+                float: left;
+                margin-left: 20px;
+            }   
+        }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <h1 class="demo-logo">
+            MEME
+            <small>Meme project health check</small>
+        </h1>
+        <hr>
+        <div id="meme_status_menu">
+            <div class="span2">
+              <a href="#" class="btn btn-large btn-block summary">Summary</a>
+            </div>
+            <div class="span2">
+              <a href="#" class="btn btn-large btn-block btn-info jenkins">Jenkins</a>
+            </div>
+        </div>
+        <div id="meme_status_dashboard">
+            <br>
+            <div id="meme_status_summary">
+                <table class="meme_status_table table">
+                    <thead>
+                        <tr>
+                            <th class="meme_status_service_name meme_status_service_name_th">Service</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>MEME Project (1.234.90.170)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td> - appcenter <a href="http://appcenter.tokabout.com/appcenter" target="_blank"> (http://appcenter.tokabout.com/appcenter) </a></td>
+                            <td>
+                                <a id="appcenter" class="btn btn-danger" href="#">ERROR</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> - sdk</td>
+                            <td>
+                                <a id="sdk" class="btn btn-danger" href="#">ERROR</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> - selector</td>
+                            <td>
+                                <a id="selector" class="btn btn-danger" href="#">ERROR</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MEME APPS Project (1.234.90.172)</td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> - site <a href="http://meme.tokabout.com/apps" target="_blank"> (http://meme.tokabout.com/apps) </a></td>
+                            <td>
+                                <a id="site" class="btn btn-danger" href="#">ERROR</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> - app</td>
+                            <td>
+                                <a id="app" class="btn btn-danger" href="#">ERROR</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="meme_status_jenkins">
+                <iframe class="meme_status_jenkins_iframe" src="http://211.110.6.156/" frameborder=0></iframe>
+            </div>
+            <hr>
+
+            <div class="span3">
+                <h3 class="demo-panel-title">Demo Apps</h3>
+                <table class="demoapps">
+                    <tr>
+                    <td>
+                    <div class="share mrl">
+                        <ul>
+                        <li>
+                            <label class="share-label" for="share-toggle2">Google Map</label>
+                        </li>
+                        <li>
+                            <label class="share-label" for="share-toggle4">Google Drive</label>
+                        </li>
+                        <li>
+                            <label class="share-label" for="share-toggle6">통합 이미지 피커</label>
+                        </li>
+                        <li>
+                            <label class="share-label" for="share-toggle6">소셜 Profile 피커</label>
+                        </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block btn-large">PICK</a>
+                    </div> <!-- /share -->
+                    </td>
+                    <td>
+
+                    <div class="share mrl">
+                        <ul>
+                        <li>
+                            <label class="share-label" for="share-toggle2">Facebook</label>
+                        </li>
+                        <li>
+                            <label class="share-label" for="share-toggle4">Twitter</label>
+                        </li>
+                        <li>
+                            <label class="share-label" for="share-toggle6">통합 이미지 공유</label>
+                        </li>
+                        <li>
+                            <label class="share-label" for="share-toggle6">&nbsp;</label>
+                        </li>
+                        </ul>
+                        <a href="#" class="btn btn-primary btn-block btn-large">Share</a>
+                    </div> <!-- /share -->
+                    </td>
+                    </tr>
+                </table>    
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr>
+        <span class="footer_message">Meme - SK Planet<br><br></span>
+    </footer>
+    <script type="text/javascript" src="/javascripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        var checkServiceAppCenterUrl = "http://appcenter.tokabout.com/appcenter/api/status";
+        var checkServiceSdkUrl = "http://appcenter.tokabout.com/sdk/status";
+        var checkServiceSelectorUrl = "http://appcenter.tokabout.com/selector/status";
+        var checkServiceAppUrl = "http://meme.tokabout.com/apps/status";
+
+        $(document).ready(function(){
+            showSummary();
+            checkService("#appcenter", checkServiceAppCenterUrl);
+            checkService("#sdk", checkServiceSdkUrl);
+            checkService("#selector", checkServiceSelectorUrl);
+            checkService("#site", checkServiceAppUrl);
+            checkService("#app", checkServiceAppUrl);
+            setInterval("checkService()", 1000*60*5);
+            $('.summary').click(showSummary);
+            $('.jenkins').click(showJenkins);
+        });
+
+        var showSummary = function() {
+            $('#meme_status_summary').show();
+            $('#meme_status_jenkins').hide();
+        }
+
+        var showJenkins = function() {
+            $('#meme_status_summary').hide();
+            $('#meme_status_jenkins').show();
+        }
+
+        var checkService = function(checkId, checkUrl) {
+            $.get(checkUrl)
+            .done(successToggle(checkId))
+            .fail(function(){
+                errorToggle(checkId);
+            });    
+        }
+
+        var successToggle = function(id) {
+            $(id).attr('class', 'btn btn-primary');
+            $(id).text("RUN");
+        }
+
+        var errorToggle = function(id) {
+            $(id).attr('class', 'btn btn-danger');
+            $(id).text("ERROR");    
+        }
+
+    </script>
+  </body>
+</html>
